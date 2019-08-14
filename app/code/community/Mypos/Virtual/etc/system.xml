@@ -4,7 +4,7 @@
         <payment>
             <groups>To use this payment option you need to sign up for a myPOS account.
                 <mypos_virtual translate="label comment" module="paygate">
-                    <label>myPOS Virtual</label>
+                    <label>myPOS Checkout</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>100</sort_order>
                     <show_in_default>1</show_in_default>
@@ -41,7 +41,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <comment>
-                                <![CDATA[Determines whether the myPOS Virtual test environment is used.]]>
+                                <![CDATA[Determines whether the myPOS Checkout test environment is used.]]>
                             </comment>
                         </test>
                         <sort_order translate="label">
@@ -97,7 +97,7 @@
                                     <show_in_website>1</show_in_website>
                                     <show_in_store>1</show_in_store>
                                     <comment>
-                                        <![CDATA[The Private Key for your store is generated in your online banking at www.mypos.eu > menu eCommerce > Online stores > Keys.]]>
+                                        <![CDATA[The Private Key for your store is generated in your online banking at www.mypos.eu > menu Online > Online stores > Keys.]]>
                                     </comment>
                                 </developer_store_private_key>
 
@@ -111,7 +111,7 @@
                                     <show_in_website>1</show_in_website>
                                     <show_in_store>1</show_in_store>
                                     <comment>
-                                        <![CDATA[The myPOS Public Certificate is available for download in your online banking at www.mypos.eu > menu eCommerce > Online stores > Keys.]]>
+                                        <![CDATA[The myPOS Public Certificate is available for download in your online banking at www.mypos.eu > menu Online > Online stores > Keys.]]>
                                     </comment>
                                 </developer_ipc_public_certificate>
 
@@ -134,7 +134,7 @@
                                     <show_in_website>1</show_in_website>
                                     <show_in_store>1</show_in_store>
                                     <comment>
-                                        <![CDATA[The Key Index assigned to the certificate could be reviewed in your online banking at www.mypos.eu > menu eCommerce > Online stores > Keys.]]>
+                                        <![CDATA[The Key Index assigned to the certificate could be reviewed in your online banking at www.mypos.eu > menu Online > Online stores > Keys.]]>
                                     </comment>
                                 </developer_keyindex>
                             </fields>
@@ -157,7 +157,7 @@
                                     <show_in_website>1</show_in_website>
                                     <show_in_store>1</show_in_store>
                                     <comment>
-                                        <![CDATA[Store ID is given when you add a new online store. It could be reviewed in your online banking at www.mypos.eu > menu eCommerce > Online stores.]]>
+                                        <![CDATA[Store ID is given when you add a new online store. It could be reviewed in your online banking at www.mypos.eu > menu Online > Online stores.]]>
                                     </comment>
                                 </production_sid>
                                 <production_wallet_number translate="label">
@@ -182,7 +182,7 @@
                                     <show_in_website>1</show_in_website>
                                     <show_in_store>1</show_in_store>
                                     <comment>
-                                        <![CDATA[The Private Key for your store is generated in your online banking at www.mypos.eu > menu eCommerce > Online stores > Keys.]]>
+                                        <![CDATA[The Private Key for your store is generated in your online banking at www.mypos.eu > menu Online > Online stores > Keys.]]>
                                     </comment>
                                 </production_store_private_key>
 
@@ -195,7 +195,7 @@
                                     <show_in_website>1</show_in_website>
                                     <show_in_store>1</show_in_store>
                                     <comment>
-                                        <![CDATA[The myPOS Public Certificate is available for download in your online banking at www.mypos.eu > menu eCommerce > Online stores > Keys.]]>
+                                        <![CDATA[The myPOS Public Certificate is available for download in your online banking at www.mypos.eu > menu Online > Online stores > Keys.]]>
                                     </comment>
                                 </production_ipc_public_certificate>
 
@@ -218,7 +218,7 @@
                                     <show_in_website>1</show_in_website>
                                     <show_in_store>1</show_in_store>
                                     <comment>
-                                        <![CDATA[The Key Index assigned to the certificate could be reviewed in your online banking at www.mypos.eu > menu eCommerce > Online stores > Keys.]]>
+                                        <![CDATA[The Key Index assigned to the certificate could be reviewed in your online banking at www.mypos.eu > menu Online > Online stores > Keys.]]>
                                     </comment>
                                 </production_keyindex>
                             </fields>

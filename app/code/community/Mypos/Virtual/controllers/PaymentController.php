@@ -1,6 +1,7 @@
 <?php
 /*
  * Mypos Virtual Checkout Payment Controller
+ *
  * @author Intercard Finance AD
 */
 

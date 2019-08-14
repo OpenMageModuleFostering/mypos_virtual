@@ -28,7 +28,7 @@
                 <model>mypos_virtual/standard</model>
                 <active>1</active>
                 <test>1</test>
-                <title>myPOS Virtual</title>
+                <title>myPOS Checkout</title>
                 <payment_action>sale</payment_action>
                 <sort_order>1</sort_order>
                 <developer_url>https://www.mypos.eu/vmp/checkout-test</developer_url>
