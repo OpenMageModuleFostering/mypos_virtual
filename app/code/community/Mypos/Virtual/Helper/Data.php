@@ -99,8 +99,8 @@ class Mypos_Virtual_Helper_Data extends Mage_Core_Helper_Abstract
         {
             $post['Article_' . $index] = html_entity_decode(strip_tags($item->getName()));
             $post['Quantity_' . $index] = number_format($item->getQtyOrdered(), 2, '.', '');
-            $post['Price_' . $index] = number_format($item->getBaseOriginalPrice(), 2, '.', '');
-            $post['Amount_' . $index] = number_format($item->getBaseOriginalPrice() * $item->getQtyOrdered(), 2, '.', '');
+            $post['Price_' . $index] = number_format($item->getPrice(), 2, '.', '');
+            $post['Amount_' . $index] = number_format($item->getPrice() * $item->getQtyOrdered(), 2, '.', '');
             $post['Currency_' . $index] = $_order->getBaseCurrency()->getCode();
 
             $index++;
@@ -109,8 +109,8 @@ class Mypos_Virtual_Helper_Data extends Mage_Core_Helper_Abstract
         if ($_order->getShippingDescription() !== '') {
             $post['Article_' . $index] = $_order->getShippingDescription();
             $post['Quantity_' . $index] = 1;
-            $post['Price_' . $index] = number_format($_order->getBaseShippingAmount(), 2, '.', '');
-            $post['Amount_' . $index] = number_format($_order->getBaseShippingAmount() * 1, 2, '.', '');
+            $post['Price_' . $index] = number_format($_order->getShippingAmount(), 2, '.', '');
+            $post['Amount_' . $index] = number_format($_order->getShippingAmount() * 1, 2, '.', '');
             $post['Currency_' . $index] = $_order->getBaseCurrency()->getCode();
 
             $index++;
