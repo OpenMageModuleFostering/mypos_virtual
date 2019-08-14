@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/myPOS_Virtual",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License-(GPL)",
+    "homepage": "",
+    "description": "Accept card payments in few easy steps! Try our simple and secure checkout solution for European merchants.",
+    "authors": [
+    {
+        "name": "iPay International S.A.",
+        "email": "mvp@ipay.eu"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

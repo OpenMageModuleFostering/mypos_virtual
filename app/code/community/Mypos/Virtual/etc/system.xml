@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <payment>
+            <groups>To use this payment option you need to sign up for a myPOS account.
+                <mypos_virtual translate="label comment" module="paygate">
+                    <label>myPOS Virtual</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment><![CDATA[To use this payment option you need to <a href="https://mypos.eu/en/register/" target="_blank">sign up</a> for a myPOS account.]]></comment>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <config_path>payment/mypos_virtual/active</config_path>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <title translate="label">
+                            <label>Title</label>
+                            <config_path>payment/mypos_virtual/title</config_path>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <test translate="label">
+                            <label>Test Mode</label>
+                            <config_path>payment/mypos_virtual/test</config_path>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>18</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>
+                                <![CDATA[Determines whether the myPOS Virtual test environment is used.]]>
+                            </comment>
+                        </test>
+                        <sort_order translate="label">
+                            <config_path>payment/mypos_virtual/sort_order</config_path>
+                            <label>Sort Order</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sort_order>
+                        <developer_settings type="group" translate="label">
+                            <label>Developer Settings</label>
+                            <frontend_class>config-advanced</frontend_class>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>20</sort_order>
+                            <fields>
+                                <developer_sid translate="label">
+                                    <label>Store ID</label>
+                                    <config_path>payment/mypos_virtual/developer_sid</config_path>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>30</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <comment>
+                                        <![CDATA[Store ID is given when you add a new online store. It could be reviewed in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores.]]>
+                                    </comment>
+                                </developer_sid>
+
+                                <developer_wallet_number translate="label">
+                                    <label>Client Number</label>
+                                    <config_path>payment/mypos_virtual/developer_wallet_number</config_path>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>40</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <comment>
+                                        <![CDATA[You can view your myPOS Client number in your online banking at mypos.eu]]>
+                                    </comment>
+                                </developer_wallet_number>
+
+                                <developer_store_private_key>
+                                    <label>Private Key</label>
+                                    <config_path>payment/mypos_virtual/developer_store_private_key</config_path>
+                                    <frontend_type>textarea</frontend_type>
+                                    <sort_order>50</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <comment>
+                                        <![CDATA[The Private Key for your store is generated in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores > Keys menu.]]>
+                                    </comment>
+                                </developer_store_private_key>
+
+                                <developer_ipc_public_certificate>
+                                    <label>myPOS Public Certificate</label>
+                                    <config_path>payment/mypos_virtual/developer_ipc_public_certificate</config_path>
+                                    <frontend_type>file</frontend_type>
+                                    <frontend_type>textarea</frontend_type>
+                                    <sort_order>60</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <comment>
+                                        <![CDATA[The myPOS Public Certificate is available for download in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores > Keys menu.]]>
+                                    </comment>
+                                </developer_ipc_public_certificate>
+
+                                <developer_url translate="label">
+                                    <label>Developer URL</label>
+                                    <config_path>payment/mypos_virtual/developer_url</config_path>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>110</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </developer_url>
+
+                                <developer_keyindex translate="label">
+                                    <label>Developer Key Index</label>
+                                    <config_path>payment/mypos_virtual/developer_keyindex</config_path>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>120</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <comment>
+                                        <![CDATA[The Key Index assigned to the certificate  could be reviewed in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores > Keys menu.]]>
+                                    </comment>
+                                </developer_keyindex>
+                            </fields>
+                        </developer_settings>
+                        <production_settings type="group" translate="label">
+                            <label>Production Settings</label>
+                            <frontend_class>config-advanced</frontend_class>
+                            <frontend_type>text</frontend_type>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <sort_order>30</sort_order>
+                            <fields>
+                                <production_sid translate="label">
+                                    <label>Store ID</label>
+                                    <config_path>payment/mypos_virtual/production_sid</config_path>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>30</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <comment>
+                                        <![CDATA[Store ID is given when you add a new online store. It could be reviewed in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores.]]>
+                                    </comment>
+                                </production_sid>
+                                <production_wallet_number translate="label">
+                                    <label>Client Number</label>
+                                    <config_path>payment/mypos_virtual/production_wallet_number</config_path>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>40</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <comment>
+                                        <![CDATA[You can view your myPOS Client number in your online banking at mypos.eu]]>
+                                    </comment>
+                                </production_wallet_number>
+
+                                <production_store_private_key>
+                                    <label>Private Key</label>
+                                    <config_path>payment/mypos_virtual/production_store_private_key</config_path>
+                                    <frontend_type>textarea</frontend_type>
+                                    <sort_order>50</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <comment>
+                                        <![CDATA[The Private Key for your store is generated in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores > Keys menu.]]>
+                                    </comment>
+                                </production_store_private_key>
+
+                                <production_ipc_public_certificate>
+                                    <label>myPOS Public Certificate</label>
+                                    <config_path>payment/mypos_virtual/production_ipc_public_certificate</config_path>
+                                    <frontend_type>textarea</frontend_type>
+                                    <sort_order>60</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <comment>
+                                        <![CDATA[The myPOS Public Certificate is available for download in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores > Keys menu.]]>
+                                    </comment>
+                                </production_ipc_public_certificate>
+
+                                <production_url translate="label">
+                                    <label>Production URL</label>
+                                    <config_path>payment/mypos_virtual/production_url</config_path>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>120</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                </production_url>
+
+                                <production_keyindex translate="label">
+                                    <label>Production Key Index</label>
+                                    <config_path>payment/mypos_virtual/production_keyindex</config_path>
+                                    <frontend_type>text</frontend_type>
+                                    <sort_order>130</sort_order>
+                                    <show_in_default>1</show_in_default>
+                                    <show_in_website>1</show_in_website>
+                                    <show_in_store>0</show_in_store>
+                                    <comment>
+                                        <![CDATA[The Key Index assigned to the certificate  could be reviewed in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores > Keys menu.]]>
+                                    </comment>
+                                </production_keyindex>
+                            </fields>
+                        </production_settings>
+                    </fields>
+                </mypos_virtual>
+            </groups>
+        </payment>
+    </sections>
+</config>

@@ -1,0 +1,20 @@
+<?php
+// Retrieve order
+$_order = new Mage_Sales_Model_Order();
+$orderId = Mage::getSingleton('checkout/session')->getLastRealOrderId();
+$_order->loadByIncrementId($orderId);
+
+/**
+ * @var Mypos_Virtual_Helper_Data $helper
+ */
+$helper = Mage::helper('mypos_virtual');
+
+?>
+<form name="mypos_virtual" method="post" action="<?php echo $helper->getFormUrl(); ?>">
+    <?php foreach($helper->getPost($_order) as $key => $value): ?>
+        <input type="hidden" name="<?php echo $key; ?>" value="<?php echo htmlspecialchars($value); ?>">
+    <?php endforeach; ?>
+</form>
+<script type="text/javascript">
+document.mypos_virtual.submit();
+</script>
