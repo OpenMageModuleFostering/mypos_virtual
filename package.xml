@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>myPOS_Virtual</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <stability>stable</stability>
     <license>GNU General Public License (GPL)</license>
     <channel>community</channel>
@@ -10,11 +10,11 @@
     <description>myPOS Virtual is an extension especially designed for European-based merchants who need a simple and secure complete checkout solution. Start accepting credit and debit card payments at your online store in few easy steps.&#xD;
 By using myPOS Virtual you enjoy a checkout extension backed-up by a comprehensive free merchant account with multiple currencies and an IBAN in Luxembourg.&#xD;
 </description>
-    <notes>myPOS Virtual for shopping cart is an effective and secure way for accepting card payments on your website. Just install the plugin and let your customers pay for your goods and services easily and secure using their Debit/Credit card. You will also need to register for myPOS account at www.mypos.eu.</notes>
+    <notes>Fixed an error when tax is applied.</notes>
     <authors><author><name>iPay International S.A.</name><user>ipay_developer</user><email>mvp@ipay.eu</email></author></authors>
-    <date>2016-03-01</date>
-    <time>15:49:42</time>
-    <contents><target name="magecommunity"><dir name="Mypos"><dir name="Virtual"><dir name="Helper"><file name="Data.php" hash="80bb4a2d794c32c2c4b62aecdd2d7e1b"/></dir><dir name="Model"><file name="Standard.php" hash="9c304393adbff742cbfec7af6a37bea7"/></dir><dir name="controllers"><file name="PaymentController.php" hash="725bd38de841efc89f205af4615d3349"/></dir><dir name="etc"><file name="config.xml" hash="51643300f013179eac57d538544420c1"/><file name="system.xml" hash="2d1fada936e99769bcca2350c69ce78a"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="mypos_virtual"><file name="redirect.phtml" hash="32904da0aa80adf0e0bc8b9c03c4f89e"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Mypos_Virtual.xml" hash="d38d8e8a3a6631179dfc3498736c75c9"/></dir></target></contents>
+    <date>2016-06-14</date>
+    <time>06:44:53</time>
+    <contents><target name="magecommunity"><dir name="Mypos"><dir name="Virtual"><dir name="Helper"><file name="Data.php" hash="03c1b002b18ac56f37fa7965298ba19d"/></dir><dir name="Model"><file name="Standard.php" hash="9c304393adbff742cbfec7af6a37bea7"/></dir><dir name="controllers"><file name="PaymentController.php" hash="725bd38de841efc89f205af4615d3349"/></dir><dir name="etc"><file name="config.xml" hash="51643300f013179eac57d538544420c1"/><file name="system.xml" hash="094a97cc1847aac6b90f2cc90ddd5183"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="mypos_virtual"><file name="redirect.phtml" hash="32904da0aa80adf0e0bc8b9c03c4f89e"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Mypos_Virtual.xml" hash="d38d8e8a3a6631179dfc3498736c75c9"/></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.4.8</min><max>6.0.0</max></php></required></dependencies>
+    <dependencies><required><php><min>5.2.0</min><max>7.9.9</max></php></required></dependencies>
 </package>

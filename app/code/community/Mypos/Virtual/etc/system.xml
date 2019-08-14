@@ -20,7 +20,7 @@
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </active>
                         <title translate="label">
                             <label>Title</label>
@@ -39,7 +39,7 @@
                             <sort_order>18</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                             <comment>
                                 <![CDATA[Determines whether the myPOS Virtual test environment is used.]]>
                             </comment>
@@ -51,7 +51,7 @@
                             <sort_order>100</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </sort_order>
                         <developer_settings type="group" translate="label">
                             <label>Developer Settings</label>
@@ -69,7 +69,7 @@
                                     <sort_order>30</sort_order>
                                     <show_in_default>1</show_in_default>
                                     <show_in_website>1</show_in_website>
-                                    <show_in_store>0</show_in_store>
+                                    <show_in_store>1</show_in_store>
                                     <comment>
                                         <![CDATA[Store ID is given when you add a new online store. It could be reviewed in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores.]]>
                                     </comment>
@@ -82,7 +82,7 @@
                                     <sort_order>40</sort_order>
                                     <show_in_default>1</show_in_default>
                                     <show_in_website>1</show_in_website>
-                                    <show_in_store>0</show_in_store>
+                                    <show_in_store>1</show_in_store>
                                     <comment>
                                         <![CDATA[You can view your myPOS Client number in your online banking at mypos.eu]]>
                                     </comment>
@@ -95,7 +95,7 @@
                                     <sort_order>50</sort_order>
                                     <show_in_default>1</show_in_default>
                                     <show_in_website>1</show_in_website>
-                                    <show_in_store>0</show_in_store>
+                                    <show_in_store>1</show_in_store>
                                     <comment>
                                         <![CDATA[The Private Key for your store is generated in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores > Keys menu.]]>
                                     </comment>
@@ -109,7 +109,7 @@
                                     <sort_order>60</sort_order>
                                     <show_in_default>1</show_in_default>
                                     <show_in_website>1</show_in_website>
-                                    <show_in_store>0</show_in_store>
+                                    <show_in_store>1</show_in_store>
                                     <comment>
                                         <![CDATA[The myPOS Public Certificate is available for download in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores > Keys menu.]]>
                                     </comment>
@@ -122,7 +122,7 @@
                                     <sort_order>110</sort_order>
                                     <show_in_default>1</show_in_default>
                                     <show_in_website>1</show_in_website>
-                                    <show_in_store>0</show_in_store>
+                                    <show_in_store>1</show_in_store>
                                 </developer_url>
 
                                 <developer_keyindex translate="label">
@@ -132,7 +132,7 @@
                                     <sort_order>120</sort_order>
                                     <show_in_default>1</show_in_default>
                                     <show_in_website>1</show_in_website>
-                                    <show_in_store>0</show_in_store>
+                                    <show_in_store>1</show_in_store>
                                     <comment>
                                         <![CDATA[The Key Index assigned to the certificate  could be reviewed in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores > Keys menu.]]>
                                     </comment>
@@ -155,7 +155,7 @@
                                     <sort_order>30</sort_order>
                                     <show_in_default>1</show_in_default>
                                     <show_in_website>1</show_in_website>
-                                    <show_in_store>0</show_in_store>
+                                    <show_in_store>1</show_in_store>
                                     <comment>
                                         <![CDATA[Store ID is given when you add a new online store. It could be reviewed in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores.]]>
                                     </comment>
@@ -167,7 +167,7 @@
                                     <sort_order>40</sort_order>
                                     <show_in_default>1</show_in_default>
                                     <show_in_website>1</show_in_website>
-                                    <show_in_store>0</show_in_store>
+                                    <show_in_store>1</show_in_store>
                                     <comment>
                                         <![CDATA[You can view your myPOS Client number in your online banking at mypos.eu]]>
                                     </comment>
@@ -180,7 +180,7 @@
                                     <sort_order>50</sort_order>
                                     <show_in_default>1</show_in_default>
                                     <show_in_website>1</show_in_website>
-                                    <show_in_store>0</show_in_store>
+                                    <show_in_store>1</show_in_store>
                                     <comment>
                                         <![CDATA[The Private Key for your store is generated in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores > Keys menu.]]>
                                     </comment>
@@ -193,7 +193,7 @@
                                     <sort_order>60</sort_order>
                                     <show_in_default>1</show_in_default>
                                     <show_in_website>1</show_in_website>
-                                    <show_in_store>0</show_in_store>
+                                    <show_in_store>1</show_in_store>
                                     <comment>
                                         <![CDATA[The myPOS Public Certificate is available for download in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores > Keys menu.]]>
                                     </comment>
@@ -206,7 +206,7 @@
                                     <sort_order>120</sort_order>
                                     <show_in_default>1</show_in_default>
                                     <show_in_website>1</show_in_website>
-                                    <show_in_store>0</show_in_store>
+                                    <show_in_store>1</show_in_store>
                                 </production_url>
 
                                 <production_keyindex translate="label">
@@ -216,7 +216,7 @@
                                     <sort_order>130</sort_order>
                                     <show_in_default>1</show_in_default>
                                     <show_in_website>1</show_in_website>
-                                    <show_in_store>0</show_in_store>
+                                    <show_in_store>1</show_in_store>
                                     <comment>
                                         <![CDATA[The Key Index assigned to the certificate  could be reviewed in your online banking at mypos.eu - Menu Merchant services > myPOS Virtual > Online stores > Keys menu.]]>
                                     </comment>

@@ -67,13 +67,13 @@ class Mypos_Virtual_Helper_Data extends Mage_Core_Helper_Abstract
         $post = array();
         $post['IPCmethod'] = 'IPCPurchase';
         $post['IPCVersion'] = $this->ipcVersion;
-        $post['IPCLanguage'] = 'en';
+        $post['IPCLanguage'] = substr(Mage::app()->getLocale()->getLocaleCode(), 0, 2);
         $post['WalletNumber'] = $this->walletNumber;
         $post['SID'] = $this->sid;
         $post['keyindex'] = $this->keyindex;
         $post['Source'] = 'sc_magento';
 
-        $post['Amount'] = number_format($_order->getBaseGrandTotal(), 2);
+        $post['Amount'] = number_format($_order->getBaseGrandTotal(), 2, '.', '');
         $post['Currency'] = $_order->getBaseCurrency()->getCode();
         $post['OrderID'] = $_order->getRealOrderId();
         $post['URL_OK'] = $this->getOrderOKUrl();
@@ -89,7 +89,7 @@ class Mypos_Virtual_Helper_Data extends Mage_Core_Helper_Abstract
         $post['CustomerAddress'] = $billing_address->getStreetFull();
         $post['CustomerPhone'] = $billing_address->getTelephone();
         $post['Note'] = 'Mypos Virtual Checkout Magento Extension';
-        $post['CartItems'] = $_order->getTotalItemCount() + 1;
+        $post['CartItems'] = $_order->getTotalItemCount();
 
         $index = 1;
         /**
@@ -98,19 +98,39 @@ class Mypos_Virtual_Helper_Data extends Mage_Core_Helper_Abstract
         foreach($items as $item)
         {
             $post['Article_' . $index] = html_entity_decode(strip_tags($item->getName()));
-            $post['Quantity_' . $index] = number_format($item->getQtyOrdered());
-            $post['Price_' . $index] = number_format($item->getBaseOriginalPrice(), 2);
-            $post['Amount_' . $index] = number_format($item->getBaseOriginalPrice() * $item->getQtyOrdered(), 2);
+            $post['Quantity_' . $index] = number_format($item->getQtyOrdered(), 2, '.', '');
+            $post['Price_' . $index] = number_format($item->getBaseOriginalPrice(), 2, '.', '');
+            $post['Amount_' . $index] = number_format($item->getBaseOriginalPrice() * $item->getQtyOrdered(), 2, '.', '');
             $post['Currency_' . $index] = $_order->getBaseCurrency()->getCode();
 
             $index++;
         }
 
-        $post['Article_' . $index] = $_order->getShippingDescription();
-        $post['Quantity_' . $index] = 1;
-        $post['Price_' . $index] = number_format($_order->getBaseShippingAmount(), 2);
-        $post['Amount_' . $index] = number_format($_order->getBaseShippingAmount() * 1, 2);
-        $post['Currency_' . $index] = $_order->getBaseCurrency()->getCode();
+        if ($_order->getShippingDescription() !== '') {
+            $post['Article_' . $index] = $_order->getShippingDescription();
+            $post['Quantity_' . $index] = 1;
+            $post['Price_' . $index] = number_format($_order->getBaseShippingAmount(), 2, '.', '');
+            $post['Amount_' . $index] = number_format($_order->getBaseShippingAmount() * 1, 2, '.', '');
+            $post['Currency_' . $index] = $_order->getBaseCurrency()->getCode();
+
+            $index++;
+            $post['CartItems']++;
+        }
+
+        $taxes = $_order->getFullTaxInfo();
+
+        if (count($taxes) !== 0) {
+            foreach ($taxes as $tax) {
+                $post['Article_' . $index] = "Tax" . ' (' . number_format($tax['percent'], 2, '.', '') . '%)';
+                $post['Quantity_' . $index] = 1;
+                $post['Price_' . $index] = number_format($tax['amount'], 2, '.', '');
+                $post['Amount_' . $index] = number_format($tax['amount'], 2, '.', '');
+                $post['Currency_' . $index] = $_order->getBaseCurrency()->getCode();
+
+                $index++;
+                $post['CartItems']++;
+            }
+        }
 
         $post['Signature'] = $this->createSignature($post);
 
@@ -168,7 +188,7 @@ class Mypos_Virtual_Helper_Data extends Mage_Core_Helper_Abstract
 
         $post['IPC_Trnref'] = $transactionId;
         $post['OrderID'] = $order->getRealOrderId();
-        $post['Amount'] = number_format($amount, 2);
+        $post['Amount'] = number_format($amount, 2, '.', '');
         $post['Currency'] = $order->getBaseCurrency()->getCode();
         $post['OutputFormat'] = 'xml';
 
