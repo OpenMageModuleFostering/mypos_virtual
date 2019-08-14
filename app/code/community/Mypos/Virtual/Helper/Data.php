@@ -83,7 +83,7 @@ class Mypos_Virtual_Helper_Data extends Mage_Core_Helper_Abstract
         $post['CustomerEmail'] = $_order->getCustomerEmail();
         $post['CustomerFirstNames'] =  $_order->getCustomerFirstname();
         $post['CustomerFamilyName'] = $_order->getCustomerLastname();
-        $post['CustomerCountry'] = $billing_address->getCountryModel()->getIso3Code();
+        $post['CustomerCountry'] = $billing_address->getCountryModel()->getIso3Code() !== 'ROU' ?: 'ROM';
         $post['CustomerCity'] = $billing_address->getCity();
         $post['CustomerZIPCode'] = $billing_address->getPostcode();
         $post['CustomerAddress'] = $billing_address->getStreetFull();
