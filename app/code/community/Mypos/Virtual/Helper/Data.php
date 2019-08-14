@@ -12,7 +12,7 @@ class Mypos_Virtual_Helper_Data extends Mage_Core_Helper_Abstract
 
     public function __construct()
     {
-        $this->isTest = boolval(Mage::getStoreConfig('payment/mypos_virtual/test'));
+        $this->isTest = (bool) Mage::getStoreConfig('payment/mypos_virtual/test');
         $this->ipcVersion   = '1.0';
 
         if ($this->isTest)
@@ -24,7 +24,7 @@ class Mypos_Virtual_Helper_Data extends Mage_Core_Helper_Abstract
             $this->formUrl      = Mage::getStoreConfig('payment/mypos_virtual/developer_url');
             $this->privateKey   = Mage::getStoreConfig('payment/mypos_virtual/developer_store_private_key');
             $this->publicKey    = Mage::getStoreConfig('payment/mypos_virtual/developer_ipc_public_certificate');
-            $this->keyindex    = Mage::getStoreConfig('payment/mypos_virtual/developer_keyindex');
+            $this->keyindex     = Mage::getStoreConfig('payment/mypos_virtual/developer_keyindex');
         }
         else
         {
@@ -35,7 +35,7 @@ class Mypos_Virtual_Helper_Data extends Mage_Core_Helper_Abstract
             $this->formUrl      = Mage::getStoreConfig('payment/mypos_virtual/production_url');
             $this->privateKey   = Mage::getStoreConfig('payment/mypos_virtual/production_store_private_key');
             $this->publicKey    = Mage::getStoreConfig('payment/mypos_virtual/production_ipc_public_certificate');
-            $this->keyindex    = Mage::getStoreConfig('payment/mypos_virtual/production_keyindex');
+            $this->keyindex     = Mage::getStoreConfig('payment/mypos_virtual/production_keyindex');
         }
     }
 
@@ -92,6 +92,7 @@ class Mypos_Virtual_Helper_Data extends Mage_Core_Helper_Abstract
         $post['CartItems'] = $_order->getTotalItemCount();
 
         $index = 1;
+
         /**
          * @var Mage_Sales_Model_Order_Item $item
          */
@@ -203,6 +204,9 @@ class Mypos_Virtual_Helper_Data extends Mage_Core_Helper_Abstract
 
         $post = array();
 
+        /**
+         * @var \SimpleXMLElement $child
+         */
         foreach ($xml->children() as $child)
         {
             $post[$child->getName()] = (string) $child;

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Mypos_Virtual>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Mypos_Virtual>
+    </modules>
+</config>
